@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stlyesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+       <label for="daysOfTheWeek">what's the day today?</label>
+       <select id="day">
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thusday">Thusday</option>
+        <option value="friday">Friday</option>
+       </select>
+       <a href="#" onclick="btnPressed()">hit!</a>
+       <p id="outputText">Day advice: </p>
+
+        <script>
+           function btnPressed(){
+            var daySelected = document.getElementById("day").value;
+            var advice;
+
+            switch(daySelected){
+                case "monday":
+                    advice = "Maths is the first period today!";
+                    break;
+                 case "tuesday":
+                    advice = "presentation day! Be prepared for your presentation.";
+                    break;
+                 case "wednesday":
+                    advice = "We are coding today and later it's quiz time!";
+                    break;
+                 case "thusday":
+                    advice = "Be ready for tomorrow #DUT students if you know you know $$!";
+                    break;
+                 case "friday":
+                    advice = "SAVE WATER DRINK BEER!";
+                    break;
+            }
+            document.getElementById("outputText").innerHTML = "Day advice: " + advice;
+           }
+        </script>
+    </body>
+</html>
